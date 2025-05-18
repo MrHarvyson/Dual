@@ -26,6 +26,7 @@ export default defineConfig({
 						{ label: 'Estructura', slug: 'maven/estructura_maven' },
 						{ label: 'Creación', slug: 'maven/creacion_maven' },
 						{ label: 'Ciclo de vida', slug: 'maven/ciclo_maven' },
+						{ label: 'JAR', slug: 'maven/jar' },
 					],
 				},
 				{

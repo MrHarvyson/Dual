@@ -4,7 +4,7 @@ description: Ciclo de vida de un proyecto Maven
 ---
 
 
-El ciclo de vida de un proyecto Maven se compone de una serie de fases que definen el proceso de construcción y gestión del proyecto. Cada fase representa un paso en el ciclo de vida, y Maven ejecuta estas fases en un orden específico.
+El ciclo de vida de un proyecto Maven se compone de una serie de fases que definen el proceso de construcción y gestión del proyecto. 
 Las fases más comunes son:
 - **validate**: Verifica que el proyecto esté correctamente configurado y que todas las dependencias estén disponibles.
 - **compile**: Compila el código fuente del proyecto.
@@ -15,4 +15,27 @@ Las fases más comunes son:
 - **deploy**: Despliega el paquete en un repositorio remoto.
 - **clean**: Limpia el directorio de trabajo, eliminando los archivos generados por las fases anteriores.
 
-<img src="/img/ciclo.png" alt="Ciclo de vida" width="400" />
+<div style={{display: 'flex', justifyContent: 'center'}}>
+<img src="/img/ciclo.png" alt="Ciclo de vida" width="400"/>
+</div>
+
+Como puedes ver en la imagen, el ciclo de vida de un proyecto Maven se compone de varias fases. Cada fase representa 
+un paso en el proceso de construcción y gestión del proyecto. Maven ejecuta estas fases en un orden específico, lo que 
+permite automatizar el proceso de construcción y gestión del proyecto. 
+
+Podemos ejecutar el ciclo de vida de un proyecto Maven de dos maneras diferentes:
+1. **Ejecutando mediante consola**: Podemos ejecutar una fase específica del ciclo de vida utilizando el siguiente comando:
+```bash
+mvn <fase>
+```
+Por ejemplo, para ejecutar la fase de `compile`, usaríamos el siguiente comando:
+```bash
+mvn compile
+```
+2. **Ejecutado mediante IntelliJ**: Para ello abrimos la pestaña de `Maven` en la parte derecha de IntelliJ y seleccionamos la fase que queremos ejecutar
+    como vemos en la imagen.
+
+Cuando ejecutamos una fase específica del ciclo de vida, Maven ejecuta todas las fases anteriores a la fase seleccionada.
+Por ejemplo, si ejecutamos la fase de `package`, Maven ejecutará automáticamente las fases de `validate`, `compile`, `test` 
+y `package` en ese orden.
+Esto significa que no es necesario ejecutar cada fase por separado, ya que Maven se encargará de ello automáticamente.

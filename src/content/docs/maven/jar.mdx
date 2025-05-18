@@ -1,0 +1,68 @@
+---
+title: Generación de JAR
+description: Generación de JAR
+---
+import { Steps } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+
+Una vez que hemos creado nuestro proyecto y hemos añadido las dependencias necesarias, podemos proceder a empaquetar nuestro proyecto en un archivo JAR.
+Un archivo JAR (Java ARchive) es un formato de archivo que agrupa múltiples archivos en uno solo, facilitando la distribución y ejecución de aplicaciones Java.
+Es decir, una vez creada la aplicación, podemos empaquetarla en un archivo JAR y con ese archivo JAR podemos ejecutar la aplicación en cualquier lugar 
+donde tengamos Java instalado.
+
+
+## Pasos para generar un archivo JAR
+
+Para generar un archivo JAR con Maven, debemos seguir los siguientes pasos:
+
+<Steps>
+
+1. En primer lugar, configuraremos el archivo `pom` para que podamos ejecutar nuestro JAR desde consola. Para ello, añadimos el siguiente plugin en la sección de `plugins`:
+   ```xml
+   <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>es.vedruna.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+   ```
+   - En este caso, `es.vedruna.Main` es la clase principal de nuestro proyecto. 
+   - Si no quisieras ejecutar el JAR desde consola, no es necesario añadir este plugin.
+2. Haz clic en la fase `package`. Esto ejecutará todas las fases anteriores y empaquetará tu proyecto en un archivo JAR.
+   - Al ejecutar la fase `package`, ejecutará los test y en caso de fallar alguno no nos creará el `package`.
+3. Una vez que se complete el proceso, podrás encontrar el archivo JAR en la carpeta `target` de tu proyecto. 
+   - La ruta del archivo JAR será algo como `mi_proyecto/target/mi_proyecto-1.0-SNAPSHOT.jar`.
+</Steps>
+
+## Ejecutar el archivo JAR
+
+Para ejecutar el archivo JAR que acabamos de generar, podemos usar el siguiente comando en la consola:
+
+```bash
+java -jar mi_proyecto-1.0-SNAPSHOT.jar
+```
+<Aside>
+Asegúrate de estar en la carpeta raíz de tu proyecto antes de ejecutar el comando.
+</Aside>
+
+<Aside type="caution">
+Ten en cuenta que debes tener la misma versión de Java instalada en tu PC  que la que tienes configurada en el POM.
+Puede también cambiar la versión de Java en el POM y volver a empaquetar el JAR.
+```xml
+<properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+</properties>
+```
+
+</Aside>
