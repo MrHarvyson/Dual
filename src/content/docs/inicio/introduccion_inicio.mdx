@@ -1,0 +1,52 @@
+---
+title: Introducción
+description: Página introductoria sobre los proyectos dual.
+
+---
+
+import { Badge } from '@astrojs/starlight/components';
+import { Icon } from '@astrojs/starlight/components';
+
+Desde esta plataforma se explicará el propósito de cada proyecto.
+Es importante que leas con atención, ya que aquí se definirán tanto los proyectos como las entregas que deberás realizar durante el periodo de formación dual.
+
+A lo largo del curso, llevaremos a cabo tres proyectos, los cuales estarán interconectados entre sí y formarán un conjunto coherente.
+
+
+## ⚙️ Crea tu propio codificador de contraseñas
+<Badge text="Java" variant="note" />
+<Badge text="JUnit5" variant="note" />
+<Badge text="Maven" variant="note" />
+
+En este primer proyecto crearemos una pequeña aplicación en Java que, a partir de un texto proporcionado 
+(cuyo formato definiremos más adelante), generará una contraseña como resultado.
+Para su desarrollo trabajaremos con Maven, una herramienta que nos permitirá gestionar las dependencias del proyecto de forma eficiente y 
+que utilizaremos también en los siguientes proyectos.
+Además, emplearemos JUnit 5 para implementar y ejecutar pruebas unitarias, asegurando así el correcto funcionamiento de nuestro código desde el principio.
+
+Tras completar este proyecto, habremos adquirido los conocimientos tanto para ejecutar nuestras aplicacicones Java desde la consola y también
+aprenderemos como crear librerías con nuestras propias clases y usarlas en otros proyectos como venimos haciendo hasta ahora con las librerías de Java.
+
+
+## 🐳 Dockerizando el codificador
+<Badge text="Docker" variant="note" />
+<Badge text="DockerHub" variant="note" />
+
+Una vez que hayamos terminado el primer proyecto, pasaremos a dockerizarlo.
+Esto significa que crearemos una imagen de Docker que contendrá nuestro codificador de contraseñas,
+lo que nos permitirá ejecutarlo en cualquier entorno que tenga Docker instalado.
+Además, subiremos esta imagen a DockerHub, una plataforma que nos permitirá compartirla con otros usuarios.
+
+## Github Actions
+<Badge text="GitHub Actions" variant="note" />
+<Badge text="CI/CD" variant="note" />
+<Badge text="DockerHub" variant="note" />
+
+En este tercer proyecto, aprenderemos a utilizar GitHub Actions para implementar un flujo de trabajo de integración continua (CI) y entrega continua (CD).
+Esto nos permitirá automatizar el proceso de construcción y despliegue de nuestra imagen de Docker cada vez que realicemos un cambio en nuestro código.
+De esta manera, cada vez que hagamos un commit en nuestro repositorio de GitHub, se ejecutará automáticamente un flujo de trabajo que construirá nuestra 
+imagen de Docker y la subirá a DockerHub.
+Esto nos permitirá tener siempre la última versión de nuestro codificador de contraseñas disponible en DockerHub, lista para ser utilizada en cualquier momento.
+
+
+> Es muy importante que sigas el orden de los proyectos, ya que cada uno de ellos se basa en el anterior.
