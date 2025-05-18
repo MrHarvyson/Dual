@@ -1,0 +1,18 @@
+---
+title: Ciclo de vida de un proyecto Maven
+description: Ciclo de vida de un proyecto Maven
+---
+
+
+El ciclo de vida de un proyecto Maven se compone de una serie de fases que definen el proceso de construcción y gestión del proyecto. Cada fase representa un paso en el ciclo de vida, y Maven ejecuta estas fases en un orden específico.
+Las fases más comunes son:
+- **validate**: Verifica que el proyecto esté correctamente configurado y que todas las dependencias estén disponibles.
+- **compile**: Compila el código fuente del proyecto.
+- **test**: Ejecuta las pruebas unitarias del proyecto.
+- **package**: Empaqueta el código compilado en un formato específico (por ejemplo, JAR o WAR).
+- **verify**: Realiza verificaciones adicionales en el paquete generado.
+- **install**: Instala el paquete en el repositorio local de Maven.
+- **deploy**: Despliega el paquete en un repositorio remoto.
+- **clean**: Limpia el directorio de trabajo, eliminando los archivos generados por las fases anteriores.
+
+<img src="/img/ciclo.png" alt="Ciclo de vida" width="400" />
