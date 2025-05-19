@@ -23,6 +23,7 @@ export default defineConfig({
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Introducción', slug: 'maven/introduccion_maven' },
+						{ label: 'Instalación', slug: 'maven/instalacion_maven' },
 						{ label: 'Estructura', slug: 'maven/estructura_maven' },
 						{ label: 'Creación', slug: 'maven/creacion_maven' },
 						{ label: 'Ciclo de vida', slug: 'maven/ciclo_maven' },
