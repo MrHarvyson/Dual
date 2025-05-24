@@ -31,8 +31,12 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Docker', badge: { text: 'En desarrollo', variant: 'caution' },
+					label: 'Docker',
 					items: [
+						// Each item here is one entry in the navigation menu.
+						{ label: 'Introducción', slug: 'docker/introduccion_docker' },
+						{ label: 'Instalación', slug: 'docker/instalacion_docker' },
+						{ label: 'Primer Contacto', slug: 'docker/contacto_docker' },
 					],
 				},
 				{
