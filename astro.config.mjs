@@ -37,6 +37,7 @@ export default defineConfig({
 						{ label: 'Introducción', slug: 'docker/introduccion_docker' },
 						{ label: 'Instalación', slug: 'docker/instalacion_docker' },
 						{ label: 'Primer Contacto', slug: 'docker/contacto_docker' },
+						{ label: 'Tarea Docker', slug: 'docker/tarea_docker' },
 					],
 				},
 				{
