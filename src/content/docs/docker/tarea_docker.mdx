@@ -3,6 +3,7 @@ title: Tarea Docker
 description: Tarea Docker
 ---
 import { Steps } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
 
 Una vez que has aprendido los coneceptos básicos de Docker y has usado la imagen Docker de MySQL vas aprender a crear tu propia imagen Docker.
 Usaremos el .jar de la aplicación que has creado en la tarea anterior y lo empaquetaremos en una imagen Docker.
@@ -10,13 +11,19 @@ Usaremos el .jar de la aplicación que has creado en la tarea anterior y lo empa
 ## Pasos recomendados para afrontar la tarea
 
 <Steps>
-
-1. [Video explicativo](https://openwebinars.net/academia/portada/docker-introduccion/) (sección CREACIÓN DE IMÁGENES DOCKER) de como crear un Dockerfile (archivo necesario para crear una imagen
-Docker a partir de un .jar)
-
-2. Una vez creada la imagen Docker tendrás que comprobar que tu imagen funciona correctamente. Para ellos crearás un contenedor con esa imagen y tendréis
-que usar la consola del contenedor para ejecutar el .jar.
-
-3. Una vez comprobado que el contenedor funciona correctamente, debéis subir la imagen a vuestra cuenta de Docker Hub.
-
+  <ol>
+    <li>
+      <LinkCard
+        title="Video explicativo"
+        href="https://openwebinars.net/academia/portada/docker-introduccion/"
+        description='Ver sección CREACIÓN DE IMÁGENES DOCKER'
+      />
+    </li>
+    <li>
+      Una vez creada la imagen Docker tendrás que comprobar que tu imagen funciona correctamente. Para ello crearás un contenedor con esa imagen y tendrás que usar la consola del contenedor para ejecutar el .jar.
+    </li>
+    <li>
+      Una vez comprobado que el contenedor funciona correctamente, debéis subir la imagen a vuestra cuenta de Docker Hub.
+    </li>
+  </ol>
 </Steps>
